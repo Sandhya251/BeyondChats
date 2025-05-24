@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+#  BeyondChats
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**BeyondChats** is a modern, single-page admin panel interface inspired by Intercom. Built using **React.js**, the project focuses on providing a smooth, responsive, and minimal user experience with a clear layout for handling customer communications. It includes sidebar navigation, a conversation panel, and a simple search interface, making it ideal for dashboard-style messaging platforms.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+##  Live Demo
 
-### `npm start`
+[View Live Application](https://beyond-chats-orcin.vercel.app)
+https://beyond-chats-7gm7yw5hh-sandhya-sisodiyas-projects.vercel.app/
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React.js** – Core frontend framework
+- **CSS** – For styling the interface
+- **Vite** – For lightning-fast development and build
+- **Vercel** – For seamless deployment
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##  Features
 
-### `npm run build`
+- **Sidebar Navigation**  
+  Access core sections like Inbox, Contacts, and Settings from a persistent sidebar.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Conversation Panel**  
+  View and manage recent conversations with users in a responsive layout.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Search Functionality**  
+  Quickly locate conversations or contacts through a built-in search input.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-  **Responsive Design**  
+  Optimized for desktop and mobile devices to ensure accessibility and usability.
 
-### `npm run eject`
+- **Simple & Clean UI**  
+  A focus on clarity and user-friendly layouts.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Project Structure
+bash
+Copy
+Edit
+BeyondChats/
+├── public/            # Static assets
+├── src/
+│   ├── components/    # Reusable UI components
+│   ├── pages/         # Page-level components (Inbox, Contacts, etc.)
+│   ├── App.jsx        # Main app structure
+│   └── main.jsx       # Vite entry point
+├── package.json       # Project metadata and dependencies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+##  Getting Started
 
-## Learn More
+To set up and run the project locally:
+```bash
+# Clone the repository
+git clone https://github.com/Sandhya251/BeyondChats.git
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Navigate into the project directory
+cd BeyondChats
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Install dependencies
+npm install
 
-### Code Splitting
+# Start the development server
+npm run dev
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
