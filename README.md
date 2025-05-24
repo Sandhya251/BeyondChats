@@ -6,8 +6,8 @@
 
 ##  Live Demo
 
-[View Live Application](https://beyond-chats-orcin.vercel.app)
-https://beyond-chats-7gm7yw5hh-sandhya-sisodiyas-projects.vercel.app/
+[View Live Application](https://beyond-chats-58qi.vercel.app/)
+https://beyond-chats-58qi-4bxcuyf8j-sandhya-sisodiyas-projects.vercel.app/
 ---
 
 ## Technologies Used
@@ -67,5 +67,5 @@ cd BeyondChats
 npm install
 
 # Start the development server
-npm run dev
+npm start
 
