@@ -1,0 +1,269 @@
+/* Base Reset */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Layout Containers */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #3f3fff;
+  color: white;
+  padding: 20px;
+  display: none;
+  flex-shrink: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .sidebar {
+    display: block;
+  }
+}
+
+/* Sidebar Nav Links */
+.navLink {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.navLink.active {
+  background: white;
+  color: #3f3fff;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+/* Header */
+.header {
+  background-color: white;
+  padding: 16px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.mobileToggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  display: none;
+  cursor: pointer;
+}
+
+/* Chat List */
+.chatList {
+  padding: 20px;
+  overflow-y: auto;
+  height: calc(100vh - 64px);
+}
+
+.chatCard {
+  padding: 16px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  background: white;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.chatCard:hover {
+  background-color: #f5f5f5;
+  transform: scale(1.01);
+}
+
+.chatCard.active {
+  background-color: #d0e5ff;
+  border-left: 4px solid #3f3fff;
+}
+
+/* Chat Window */
+.chatWindow {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #f9f9f9;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+/* Messages */
+.message {
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  max-width: 70%;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  word-wrap: break-word;
+  font-size: 14px;
+  position: relative;
+}
+
+.message.user {
+  background-color: #e0e0e0;
+  align-self: flex-start;
+}
+
+.message.agent {
+  background-color: #d0e5ff;
+  align-self: flex-end;
+}
+
+.message:hover {
+  transform: scale(1.02);
+  opacity: 0.95;
+}
+
+/* Optional Timestamps */
+.message::after {
+  content: attr(data-time);
+  display: block;
+  font-size: 10px;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* Input Box */
+.inputBox {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background: white;
+  border-top: 1px solid #ccc;
+  position: sticky;
+  bottom: 0;
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.06);
+  z-index: 10;
+}
+
+.inputBox textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: none;
+  max-height: 120px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.inputBox textarea:focus {
+  outline: none;
+  border-color: #3f3fff;
+  box-shadow: 0 0 0 2px rgba(63, 63, 255, 0.2);
+}
+
+.inputBox button {
+  align-self: flex-end;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #3f3fff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.inputBox button:hover {
+  background-color: #2f2fd1;
+}
+
+/* Scroll-to-bottom Button */
+.scrollDownBtn {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background: #3f3fff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+/* Avatar and Status */
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.status {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-left: 4px;
+}
+
+.status.online {
+  background: #4caf50;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    display: block;
+    width: 220px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .mobileToggle {
+    display: block;
+    margin-right: 10px;
+  }
+
+  .chatWindow {
+    padding: 16px;
+  }
+
+  .message {
+    font-size: 14px;
+  }
+
+  .inputBox textarea {
+    margin-bottom: 10px;
+  }
+
+  .scrollDownBtn {
+    bottom: 90px;
+  }
+}
